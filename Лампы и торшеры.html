@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Лампы и торшеры</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      #scrollBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      #scrollBtn:hover {
+        background-color: #0056b3;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body background="img/глав фон.png">
+    <header class="site-header" align="center">
+      <div class="container">
+        <h1>Royal</h1>
+      </div>
+    </header>
+
+    <section class="features" align="center">
+      <p class="feature-home"><a href="index.html">Главная</a></p>
+      <p class="feature-furniture">
+        <a href="Мебель и фурнитура.html">Мебель и фурнитура</a>
+      </p>
+      <p class="feature-accessories">
+        <a href="Аксессуары и мелочи.html">Аксессуары и мелочи</a>
+      </p>
+    </section>
+
+    <button id="scrollBtn" onclick="scrollToTop()">Наверх</button>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollBtn").style.display = "block";
+          document.getElementById("scrollBtn").style.animation = "fadeIn 0.3s";
+        } else {
+          document.getElementById("scrollBtn").style.animation = "fadeOut 0.3s";
+          document.getElementById("scrollBtn").style.display = "none";
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <center>
+      <h2>Лампы и торшеры</h2>
+      <div>
+        <div>
+          <a href="Лампы и торшеры/Лампа президентская.html"
+            ><h3>Лампа настольная "Президентская" (малахит)</h3>
+          </a>
+          <img
+            src="Лампы и торшеры/img/Лампа президентская.jpg"
+            alt="Ваш браузер не поддерживает изображение"
+            width="500"
+            height="500"
+          />
+          <p>Цена: 350 000 руб.</p>
+        </div>
+
+        <div>
+          <a href="Лампы и торшеры/Торшер.html"><h3>Торшер Celine</h3> </a>
+          <img
+            src="Лампы и торшеры/img/Торшер.webp"
+            alt="Ваш браузер не поддерживает изображение"
+            width="500"
+            height="500"
+          />
+          <p>Цена: 355 227 руб.</p>
+        </div>
+
+        <div>
+          <a href="Лампы и торшеры/Лампа руководителя.html"
+            ><h3>Лампа руководителя "Нефрит" Златоуст</h3>
+          </a>
+          <img
+            src="Лампы и торшеры/img/Лампа руководителя.jpg"
+            alt="Ваш браузер не поддерживает изображение"
+            width="500"
+            height="500"
+          />
+          <p>Цена: 327 300 руб.</p>
+        </div>
+      </div>
+    </center>
+
+    <footer class="site-footer" align="center">
+      <div class="container">
+        <p>© ROYAL</p>
+
+        <p>Магазин товаров для дома</p>
+        <br />
+        <p>
+          У вас есть вопросы? Оставьте
+          <a href="Обратная связь.html">заявку</a> или звоните по телефону:
+        </p>
+        <p>+7 931 365-35-72</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Информация о президентской лампе</title>
+    <link rel="stylesheet" href="../style заголовки.css" />
+    <style>
+      #scrollBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      #scrollBtn:hover {
+        background-color: #0056b3;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header" align="center">
+      <div class="container">
+        <h1 style="font-size: 56px">Royal</h1>
+        <left><a href="../Лампы и торшеры.html">Вернуться назад</a></left>
+      </div>
+    </header>
+
+    <div>
+      <center>
+        <font color="orange"
+          ><h1>Лампа настольная "Президентская" (малахит)</h1></font
+        >
+        <img
+          src="img/Лампа президентская.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="500"
+          height="500"
+        />
+        <br />
+        <img
+          src="img/Лампа президентская 1.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <img
+          src="img/Лампа президентская 2.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <img
+          src="img/Лампа президентская 3.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <h3>Цена: 350 000 руб.</h3>
+      </center>
+    </div>
+    <button id="scrollBtn" onclick="scrollToTop()">Наверх</button>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollBtn").style.display = "block";
+          document.getElementById("scrollBtn").style.animation = "fadeIn 0.3s";
+        } else {
+          document.getElementById("scrollBtn").style.animation = "fadeOut 0.3s";
+          document.getElementById("scrollBtn").style.display = "none";
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <center>
+      <table border="1" cellpadding="10">
+        <tr>
+          <th>Характеристика</th>
+          <th>Значение</th>
+        </tr>
+        <tr>
+          <td>Материал</td>
+          <td>малахит, латунь</td>
+        </tr>
+        <tr>
+          <td>Покрытие</td>
+          <td>золотом 999,9; никелем</td>
+        </tr>
+        <tr>
+          <td>Техника исполнения</td>
+          <td>
+            токарные и слесарные работы, рисовка кистью на металле,
+            многоступенчатая гравировка иглой по лаку, травление, ручная
+            подрезка, полировка.
+          </td>
+        </tr>
+        <tr>
+          <td>Высота</td>
+          <td>620 мм.</td>
+        </tr>
+        <tr>
+          <td>Диаметр плафона</td>
+          <td>340 мм.</td>
+        </tr>
+        <tr>
+          <td>Основание</td>
+          <td>160x160 мм.</td>
+        </tr>
+      </table>
+
+      <p>
+        Украшением любого рабочего кабинета или деловой зоны с легкостью станет
+        изумительная президентская лампа. В этом изделии умело сочетается
+        классика <br />
+        и современность: высококачественная лампа накаливания, малахит и латунь.
+        Никаких вычурностей и вензелей – предложение лаконично и идеально
+        впишется практически <br />
+        в любой интерьер. Дело за малым – правильно подобрать цветовую гамму,
+        чтобы малахит смог раскрыть всю свою привлекательность в полной мере.
+      </p>
+    </center>
+
+    <footer class="site-footer" align="center">
+      <div class="container">
+        <p>© ROYAL</p>
+
+        <p>Магазин товаров для дома</p>
+        <p>
+          У вас есть вопросы? Оставьте
+          <a href="../Обратная связь.html">заявку</a> или звоните по телефону:
+        </p>
+        <p>+7 931 365-35-72</p>
+      </div>
+    </footer>
+  </body>
+</html>

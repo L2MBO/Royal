@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обратная связь</title>
+    <link rel="stylesheet" href="style связь.css" />
+    <style>
+      .containers {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #bedebc;
+        border-radius: 5px;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0 20px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+
+      .button {
+        background-color: #4caf50;
+        color: white;
+        padding: 15px 20px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+      }
+
+      .button:hover {
+        background-color: #45a049;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-top: 100px;
+      }
+
+      .modal-content {
+        background-color: white;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 400px; /* Фиксированная ширина окна */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .modal p {
+        margin: 10px 0;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      .close:hover,
+      .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <h1>Royal</h1>
+      </div>
+    </header>
+
+    <section class="features" align="center">
+      <p class="feature-home"><a href="index.html">Главная</a></p>
+      <p class="feature-furniture">
+        <a href="Мебель и фурнитура.html">Мебель и фурнитура</a>
+      </p>
+      <p class="feature-lighting">
+        <a href="Лампы и торшеры.html">Лампы и торшеры</a>
+      </p>
+      <p class="feature-accessories">
+        <a href="Аксессуары и мелочи.html">Аксессуары и мелочи</a>
+      </p>
+    </section>
+    <center>
+      <div class="containers">
+        <h2>Обратная связь</h2>
+        <form id="feedbackForm">
+          <label for="name">Имя:</label>
+          <input type="text" id="name" name="name" required /><br /><br />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="feedback_type">Тип обращения:</label>
+          <select id="feedback_type" name="feedback_type">
+            <option value="complaint">Оформление заказа</option>
+            <option value="complaint">Вопрос</option>
+            <option value="question">Предложение</option>
+            <option value="suggestion">Жалоба</option></select
+          ><br /><br />
+
+          <label for="message">Сообщение:</label><br />
+          <textarea id="message" name="message" rows="4" required></textarea
+          ><br /><br />
+
+          <input type="submit" value="Отправить" />
+        </form>
+      </div>
+    </center>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Спасибо за вашу заявку!</p>
+        <p>Мы свяжемся с вами в ближайшее время.</p>
+      </div>
+    </div>
+
+    <br /><br /><br /><br />
+    <footer class="site-footer" align="center">
+      <div class="container">
+        <p>© ROYAL</p>
+
+        <p>Магазин товаров для дома</p>
+        <br />
+        <p>У вас все еще остались вопросы? Звоните по телефону:</p>
+        <p>+7 931 365-35-72</p>
+      </div>
+    </footer>
+
+    <script>
+      let modal = document.getElementById("myModal");
+
+      let form = document.getElementById("feedbackForm");
+
+      let span = document.getElementsByClassName("close")[0];
+
+      form.onsubmit = function (event) {
+        event.preventDefault();
+
+        modal.style.display = "block";
+      };
+
+      span.onclick = function () {
+        modal.style.display = "none";
+        form.reset();
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+          form.reset();
+        }
+      };
+    </script>
+  </body>
+</html>

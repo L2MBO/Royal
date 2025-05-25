@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Информация о зеркале</title>
+    <link rel="stylesheet" href="../style заголовки.css" />
+    <style>
+      #scrollBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      #scrollBtn:hover {
+        background-color: #0056b3;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body background="../img/глав фон.png">
+    <header class="site-header" align="center">
+      <div class="container">
+        <h1 style="font-size: 56px">Royal</h1>
+        <left><a href="../Аксессуары и мелочи.html">Вернуться назад</a></left>
+      </div>
+    </header>
+
+    <div>
+      <center>
+        <font color="orange"><h1>Зеркало настенное в раме “Жаклин”</h1></font>
+        <img
+          src="img/Зеркало.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="500"
+          height="500"
+        />
+        <br />
+        <img
+          src="img/Зеркало 1.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <img
+          src="img/Зеркало 3.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <img
+          src="img/Зеркало 2.jpg"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <h3>Цена: 63 063 руб.</h3>
+      </center>
+    </div>
+    <button id="scrollBtn" onclick="scrollToTop()">Наверх</button>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollBtn").style.display = "block";
+          document.getElementById("scrollBtn").style.animation = "fadeIn 0.3s";
+        } else {
+          document.getElementById("scrollBtn").style.animation = "fadeOut 0.3s";
+          document.getElementById("scrollBtn").style.display = "none";
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <center>
+      <table border="1" cellpadding="10">
+        <tr>
+          <th>Характеристика</th>
+          <th>Значение</th>
+        </tr>
+        <tr>
+          <td>Размер:</td>
+          <td>110 см. х 140 см. х 6 см.</td>
+        </tr>
+        <tr>
+          <td>Цвет:</td>
+          <td>Античное золото / Золото.</td>
+        </tr>
+        <tr>
+          <td>Материал:</td>
+          <td>Дерево / Полиуретан / Стекло.</td>
+        </tr>
+        <tr>
+          <td>Форма:</td>
+          <td>Прямоугольное.</td>
+        </tr>
+        <tr>
+          <td>Стиль:</td>
+          <td>Барокко / Классический.</td>
+        </tr>
+        <tr>
+          <td>Монтаж:</td>
+          <td>Горизонтальный.</td>
+        </tr>
+      </table>
+
+      <h4>Описание</h4>
+      <p>
+        Зеркало настенное в раме “Жаклин” – большое зеркало с рамой в стиле
+        барокко. <br />
+        Большие зеркала – это отличная возможность расширить пространство.
+        Необыкновенной <br />
+        красоты золотая рама создаст декоративный эффект в убранстве дома.
+        Витиеватые и <br />
+        сложно переплетенные орнаменты создают некую возвышенность и объемность.
+      </p>
+    </center>
+
+    <footer class="site-footer" align="center">
+      <div class="container">
+        <p>© ROYAL</p>
+
+        <p>Магазин товаров для дома</p>
+        <p>
+          У вас есть вопросы? Оставьте
+          <a href="../Обратная связь.html">заявку</a> или звоните по телефону:
+        </p>
+        <p>+7 931 365-35-72</p>
+      </div>
+    </footer>
+  </body>
+</html>

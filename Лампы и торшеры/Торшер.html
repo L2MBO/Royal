@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Информация о торшере</title>
+    <link rel="stylesheet" href="../style заголовки.css" />
+    <style>
+      #scrollBtn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: opacity 0.3s;
+      }
+
+      #scrollBtn:hover {
+        background-color: #0056b3;
+      }
+
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
+        }
+        to {
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body background="../img/глав фон.png">
+    <header class="site-header" align="center">
+      <div class="container">
+        <h1 style="font-size: 56px">Royal</h1>
+        <left><a href="../Лампы и торшеры.html">Вернуться назад</a></left>
+      </div>
+    </header>
+
+    <button id="scrollBtn" onclick="scrollToTop()">Наверх</button>
+
+    <script>
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollBtn").style.display = "block";
+          document.getElementById("scrollBtn").style.animation = "fadeIn 0.3s";
+        } else {
+          document.getElementById("scrollBtn").style.animation = "fadeOut 0.3s";
+          document.getElementById("scrollBtn").style.display = "none";
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+
+    <div>
+      <center>
+        <font color="orange"><h1>Торшер Celine</h1></font>
+        <img
+          src="img/Торшер.webp"
+          alt="Ваш браузер не поддерживает изображение"
+          width="500"
+          height="500"
+        />
+        <br />
+        <img
+          src="img/Торшер 1.webp"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <img
+          src="img/Торшер 2.webp"
+          alt="Ваш браузер не поддерживает изображение"
+          width="250"
+          height="250"
+        />
+        <h3>Цена: 355 227 руб.</h3>
+      </center>
+    </div>
+    <center>
+      <table border="1" cellpadding="10">
+        <tr>
+          <th>Характеристика</th>
+          <th>Значение</th>
+        </tr>
+        <tr>
+          <th>Бренд</th>
+          <th>Eichholtz</th>
+        </tr>
+        <tr>
+          <td>Материал</td>
+          <td>металл, стекло</td>
+        </tr>
+        <tr>
+          <td>Страна происхождения</td>
+          <td>Нидерланды</td>
+        </tr>
+        <tr>
+          <td>Габариты</td>
+          <td>A. 61 | B. 35 | C. 181,5 cm</td>
+        </tr>
+        <tr>
+          <td>Стиль</td>
+          <td>Ар-деко</td>
+        </tr>
+        <tr>
+          <td>Цвет</td>
+          <td>черный</td>
+        </tr>
+        <tr>
+          <td>Назначение</td>
+          <td>Библиотека Спальня</td>
+        </tr>
+      </table>
+
+      <p>
+        Торшер Селин напоминает одну из сюрреалистических картин Сальвадора
+        Дали. <br />
+        Этот замечательный скульптурный торшер стоит на черном мраморном <br />
+        основании и имеет черный конусообразный стержень с античным <br />
+        латунным орнаментом произвольной формы. Асимметричный <br />
+        абажур из белого стекла завершает необычный дизайн.
+      </p>
+    </center>
+
+    <footer class="site-footer" align="center">
+      <div class="container">
+        <p>© ROYAL</p>
+
+        <p>Магазин товаров для дома</p>
+        <p>
+          У вас есть вопросы? Оставьте
+          <a href="../Обратная связь.html">заявку</a> или звоните по телефону:
+        </p>
+        <p>+7 931 365-35-72</p>
+      </div>
+    </footer>
+  </body>
+</html>
