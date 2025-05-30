@@ -1,60 +1,86 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
+<head>
     <meta charset="utf-8" />
     <title>Магазин товаров для дома</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"  
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+          crossorigin="anonymous">
     <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Проверяем, авторизован ли пользователь
+            if (!localStorage.getItem('isLoggedIn')) {
+                window.location.href = 'auth.html';
+            }
+
+            // Добавляем обработчик для выхода
+            const logoutLink = document.getElementById('logoutLink');
+            if (logoutLink) {
+                logoutLink.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    localStorage.removeItem('isLoggedIn');
+                    localStorage.removeItem('currentUserEmail');
+                    window.location.href = 'auth.html';
+                });
+            }
+        });
+    </script>
+</head>
+<body>
     <header class="site-header">
-      <div class="container">
-        <h1>Royal</h1>
-        <p>Разнообразные товары для дома с доставкой по всей планете</p>
-        <img src="img/royal-examples.png" width="510" height="80" />
-      </div>
+        <div class="container">
+            <h1>Royal</h1>
+            <p>Разнообразные товары для дома с доставкой по всей планете</p>
+            <img src="img/royal-examples.png" width="510" height="80" />
+        </div>
     </header>
 
     <section class="features">
-      <center>
-        <h2>Что поможет вам создать домашний уют?</h2>
-      </center>
-      <p class="feature-furniture">
-        <a href="Мебель и фурнитура.html">Мебель и фурнитура</a>
-      </p>
-      <p class="feature-lighting">
-        <a href="Лампы и торшеры.html">Лампы и торшеры</a>
-      </p>
-      <p class="feature-accessories">
-        <a href="Аксессуары и мелочи.html">Аксессуары и мелочи</a>
-      </p>
+        <center>
+            <h2>Что поможет вам создать домашний уют?</h2>
+        </center>
+        <p class="feature-furniture">
+            <a href="Мебель и фурнитура.html">Мебель и фурнитура</a>
+        </p>
+        <p class="feature-lighting">
+            <a href="Лампы и торшеры.html">Лампы и торшеры</a>
+        </p>
+        <p class="feature-accessories">
+            <a href="Аксессуары и мелочи.html">Аксессуары и мелочи</a>
+        </p>
     </section>
 
     <section class="advantages">
-      <center>
-        <h2>Что выделяет нас среди конкурентов?</h2>
-      </center>
-      <ul class="advantages-list">
-        <li class="advantages-item">Используем только природные материалы</li>
-        <li class="advantages-item standard">Ежедневные отчёты о ходе работ</li>
-        <li class="advantages-item standard">Сами соберём мебель для вас</li>
-        <li class="advantages-item vip">
-          Бесплатное гарантийное обслуживание в течение 10 лет
-        </li>
-        <li class="advantages-item vip">Доставка в день заказа</li>
-      </ul>
+        <center>
+            <h2>Что выделяет нас среди конкурентов?</h2>
+        </center>
+        <ul class="advantages-list">
+            <li class="advantages-item">Используем только природные материалы</li>
+            <li class="advantages-item standard">Ежедневные отчёты о ходе работ</li>
+            <li class="advantages-item standard">Сами соберём мебель для вас</li>
+            <li class="advantages-item vip">
+                Бесплатное гарантийное обслуживание в течение 10 лет
+            </li>
+            <li class="advantages-item vip">Доставка в день заказа</li>
+        </ul>
     </section>
 
     <footer class="site-footer">
-      <div class="container">
-        <p>© ROYAL</p>
-        <p>Магазин товаров для дома</p>
-        <br />
-        <p>
-          У вас есть вопросы? Оставьте
-          <a href="Обратная связь.html">заявку</a> или звоните по телефону:
-        </p>
-        <p>+7 931 365-35-72</p>
-      </div>
+        <div class="container">
+            <p>© ROYAL</p>
+            <p>Магазин товаров для дома</p>
+            <br />
+            <p>
+                У вас есть вопросы? Оставьте
+                <a href="Обратная связь.html">заявку</a> или звоните по телефону:
+            </p>
+            <p>+7 931 365-35-72</p>
+            <!-- Красный значок выхода -->
+            <a id="logoutLink" href="#" style="color: white;">
+                <i class="fas fa-sign-out-alt"></i> Выход
+            </a>
+        </div>
     </footer>
-  </body>
+</body>
 </html>

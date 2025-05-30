@@ -141,3 +141,12 @@ a {
 a:hover {
   color: darkred;
 }
+
+#logoutLink {
+    color: white;
+    text-decoration: none;
+}
+
+#logoutLink i {
+    margin-right: 5px;
+}
